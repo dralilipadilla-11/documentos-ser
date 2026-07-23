@@ -1,8 +1,202 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Documentos · Protocolo SER</title>
-<style>body{font-family:system-ui,sans-serif;background:#071e30;color:#f4f0e8;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:24px}h1{font-size:1.3rem;letter-spacing:.3em}p{color:#c0f0f7;font-size:.9rem}a{display:block;background:#00a8a8;color:#fff;text-decoration:none;padding:12px 24px;border-radius:8px;margin:8px 0;width:100%;max-width:420px;text-align:center;font-weight:600}a.sec{background:transparent;border:1px solid #00a8a8;color:#c0f0f7}</style></head>
-<body><h1>S·E·R</h1><p>Documentos para pacientes · Dra. Lili Padilla</p>
-<a href="/indicaciones-poligrafia.pdf">Indicaciones · Estudio de Sueño Domiciliario</a>
-<a href="/indicaciones-polisomnografia.pdf">Indicaciones · Polisomnografía</a>
-<a class="sec" href="https://form.jotform.com/261985312152052">Consentimiento Polisomnografía (firmar en línea)</a>
-<a class="sec" href="https://form.jotform.com/261833717991064">Consentimiento Poligrafía (firmar en línea)</a>
-</body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Tu estudio está confirmado · Dra. Lili Padilla</title>
+<meta name="description" content="Documentos e indicaciones para tu estudio de sueño con la Dra. Lili Padilla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #071e30;
+    --navy-soft: #0a2940;
+    --teal: #00a8a8;
+    --teal-dark: #008f8f;
+    --cyan: #3cd2dd;
+    --ice: #c0f0f7;
+    --gray: #96a4ad;
+    --white: #fff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--navy);
+    color: rgba(255,255,255,0.82);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+
+.brand {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    margin-bottom: 3rem;
+}
+.brand span { color: var(--cyan); font-style: italic; }
+
+.hero { text-align: center; margin-bottom: 3rem; }
+.hero-check {
+    width: 56px; height: 56px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+}
+.hero-check svg { width: 28px; height: 28px; }
+.hero-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--cyan);
+    margin-bottom: 0.9rem;
+}
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.1rem;
+}
+.hero h1 em { color: var(--cyan); font-style: italic; font-weight: 400; }
+.hero p { font-size: 1rem; max-width: 500px; margin: 0 auto; }
+
+.paso {
+    text-align: center;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+}
+
+.opciones { display: grid; gap: 1rem; margin-bottom: 3rem; }
+.opcion {
+    display: block;
+    background: var(--navy-soft);
+    border: 1px solid rgba(60,210,221,0.18);
+    border-radius: 14px;
+    padding: 1.6rem 1.5rem;
+    text-decoration: none;
+    transition: border-color 0.3s, transform 0.3s, background 0.3s;
+}
+.opcion:hover {
+    border-color: var(--teal);
+    background: #0d3348;
+    transform: translateY(-2px);
+}
+.opcion-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--navy);
+    background: var(--cyan);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.85rem;
+}
+.opcion h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+.opcion p { font-size: 0.93rem; color: rgba(255,255,255,0.7); margin-bottom: 0.9rem; }
+.opcion-cta { font-size: 0.9rem; font-weight: 600; color: var(--cyan); }
+.opcion-cta::after { content: ' →'; }
+
+.nota {
+    background: rgba(0,168,168,0.08);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 10px 10px 0;
+    padding: 1.15rem 1.35rem;
+    font-size: 0.92rem;
+    margin-bottom: 2.5rem;
+}
+.nota strong { color: var(--white); }
+.nota a { color: var(--cyan); }
+
+.cierre {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--ice);
+    line-height: 1.5;
+    padding: 0 1rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.38);
+    padding: 3rem 1.5rem 0;
+}
+footer a { color: var(--cyan); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer p { margin-bottom: 0.4rem; }
+
+@media (max-width: 600px) {
+    .wrap { padding: 2.5rem 1.25rem 3rem; }
+    .brand { margin-bottom: 2rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+    <p class="brand">Dra. Lili <span>Padilla</span> · Protocolo S·E·R</p>
+
+    <div class="hero">
+        <div class="hero-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <p class="hero-label">Estudio confirmado</p>
+        <h1>Tu estudio está agendado.<br><em>Ahora preparémoslo bien.</em></h1>
+        <p>Un buen estudio empieza antes de la noche del registro. Aquí están tus indicaciones y tu consentimiento — todo lo que necesitas para llegar preparado.</p>
+    </div>
+
+    <p class="paso">Elige el estudio que te corresponde</p>
+
+    <div class="opciones">
+        <a class="opcion" href="poligrafia.html">
+            <span class="opcion-tag">En tu casa</span>
+            <h2>Poligrafía respiratoria</h2>
+            <p>El estudio domiciliario. Duermes en tu propia cama con el equipo puesto y nosotros leemos la noche.</p>
+            <span class="opcion-cta">Ver mis indicaciones y consentimiento</span>
+        </a>
+
+        <a class="opcion" href="polisomnografia.html">
+            <span class="opcion-tag">En laboratorio</span>
+            <h2>Polisomnografía</h2>
+            <p>El estudio completo de sueño. Registramos toda tu arquitectura del sueño, no solo la respiración.</p>
+            <span class="opcion-cta">Ver mis indicaciones y consentimiento</span>
+        </a>
+    </div>
+
+    <div class="nota">
+        <p><strong>¿No sabes cuál te toca?</strong> Viene en el correo de confirmación de tu cita. Si aun así tienes duda, escríbenos por <a href="https://wa.me/529981516161?text=Hola%2C%20tengo%20una%20duda%20sobre%20mi%20estudio%20de%20sue%C3%B1o" target="_blank" rel="noopener">WhatsApp</a> y te decimos en un minuto.</p>
+    </div>
+
+    <p class="cierre">Gracias por poner tu sueño en nuestras manos.</p>
+
+    <footer>
+        <p>Dra. Liliana Padilla Islas · Medicina del Sueño · Cancún</p>
+        <p><a href="https://dralilipadilla.com">dralilipadilla.com</a> · <a href="https://wa.me/529981516161" target="_blank" rel="noopener">WhatsApp</a></p>
+    </footer>
+
+</div>
+</body>
+</html>
