@@ -89,6 +89,32 @@ body {
 .bloque p { font-size: 0.94rem; color: rgba(255,255,255,0.72); margin-bottom: 1.1rem; }
 .bloque p:last-child { margin-bottom: 0; }
 
+.linea { counter-reset: paso; list-style: none; margin: 0; padding: 0; }
+.linea li {
+    counter-increment: paso;
+    position: relative;
+    padding: 0 0 1.15rem 2.75rem;
+    margin-left: 0.9rem;
+    font-size: 0.93rem;
+    color: rgba(255,255,255,0.72);
+    border-left: 1px solid rgba(60,210,221,0.25);
+}
+.linea li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.linea li::before {
+    content: counter(paso);
+    position: absolute;
+    left: -0.9rem;
+    top: -0.15rem;
+    width: 1.8rem; height: 1.8rem;
+    border-radius: 50%;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+}
+.linea strong { color: var(--white); font-weight: 600; }
+
 .btn {
     display: inline-block;
     background: var(--teal);
@@ -161,9 +187,20 @@ footer p { margin-bottom: 0.4rem; }
     <a class="back" href="/">← Todos los documentos</a>
 
     <div class="head">
-        <span class="head-tag">En laboratorio</span>
+        <span class="head-tag">En hotel</span>
         <h1>Polisomnografía</h1>
         <p>Es el estudio completo del sueño: registramos tu respiración, tu actividad cerebral, tus movimientos y tu oxigenación durante toda la noche. Prepararte bien es parte del estudio.</p>
+    </div>
+
+    <div class="bloque">
+        <p class="bloque-num">Cómo será tu noche</p>
+        <h2>Del consultorio al hotel</h2>
+        <ol class="linea">
+            <li><strong>7:00 pm · Hospital Galenia, consultorio 401.</strong> Aquí te colocamos el equipo. Tómate el tiempo — es la parte que define la calidad del registro.</li>
+            <li><strong>Caminas al hotel.</strong> Ya con el equipo puesto, pasas caminando al <strong>Four Points by Sheraton</strong>, que está a unos pasos. No necesitas trasladarte en coche.</li>
+            <li><strong>Duermes ahí.</strong> Pasas la noche en el hotel mientras el equipo registra tu sueño.</li>
+            <li><strong>Por la mañana, retiramos el equipo.</strong> En el hotel o en el consultorio, según te indiquemos.</li>
+        </ol>
     </div>
 
     <div class="bloque">
