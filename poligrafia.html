@@ -89,6 +89,32 @@ body {
 .bloque p { font-size: 0.94rem; color: rgba(255,255,255,0.72); margin-bottom: 1.1rem; }
 .bloque p:last-child { margin-bottom: 0; }
 
+.linea { counter-reset: paso; list-style: none; margin: 0; padding: 0; }
+.linea li {
+    counter-increment: paso;
+    position: relative;
+    padding: 0 0 1.15rem 2.75rem;
+    margin-left: 0.9rem;
+    font-size: 0.93rem;
+    color: rgba(255,255,255,0.72);
+    border-left: 1px solid rgba(60,210,221,0.25);
+}
+.linea li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.linea li::before {
+    content: counter(paso);
+    position: absolute;
+    left: -0.9rem;
+    top: -0.15rem;
+    width: 1.8rem; height: 1.8rem;
+    border-radius: 50%;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+}
+.linea strong { color: var(--white); font-weight: 600; }
+
 .btn {
     display: inline-block;
     background: var(--teal);
@@ -164,6 +190,17 @@ footer p { margin-bottom: 0.4rem; }
         <span class="head-tag">En tu casa</span>
         <h1>Poligrafía respiratoria</h1>
         <p>Duermes en tu propia cama, con tu rutina de siempre, y el equipo registra tu respiración durante la noche. Entre más normal sea esa noche, más nos dice el estudio.</p>
+    </div>
+
+    <div class="bloque">
+        <p class="bloque-num">Cómo será tu estudio</p>
+        <h2>De la entrega a tus resultados</h2>
+        <ol class="linea">
+            <li><strong>El día de tu estudio, entre 4:00 y 8:00 pm.</strong> Recoges tu equipo en Hospital Galenia Fase II, consultorio 401-A. Ahí te damos las indicaciones paso a paso.</li>
+            <li><strong>Esa noche.</strong> Duermes en tu casa con el equipo puesto, con tu rutina normal.</li>
+            <li><strong>A la mañana siguiente hábil, entre 9:00 am y 12:00 pm.</strong> Devuelves el equipo en el consultorio.</li>
+            <li><strong>En máximo 5 días.</strong> Recibes tus resultados con interpretación clínica. Si vienes referid@ por tu médico, el reporte también se comparte con él o ella.</li>
+        </ol>
     </div>
 
     <div class="bloque">
